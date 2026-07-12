@@ -1,49 +1,200 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout title="The History of JavaScript" description="Explore the timeline of the programming language that shaped the modern web—from a 10-day browser prototype to a universal runtime.">
+	<main>
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="container animate-fade-in">
+				<h1>The History of <br /><span class="gradient-text">JavaScript</span></h1>
+				<p class="hero-subtitle">
+					Explore the timeline of the programming language that shaped the modern web—from a 10-day browser prototype to a universal runtime.
+				</p>
+			</div>
+		</section>
+
+		<!-- Evolution of JavaScript Timeline -->
+		<section id="timeline" class="timeline-section container">
+			<div class="timeline-tracker">
+				<div class="timeline-line"></div>
+				
+				<!-- Item 1: 1995 -->
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-card">
+						<div class="timeline-header">
+							<span class="timeline-year">1995</span>
+							<span class="timeline-event">Creation of JavaScript</span>
+						</div>
+						<p class="timeline-description">
+							JavaScript was created by <strong>Brendan Eich</strong> in just ten days while working at Netscape.
+							<br /><br />
+							It was initially developed as a lightweight client-side scripting language for the <strong>Netscape Navigator 2.0</strong> browser. The goal was to make web pages more interactive and dynamic. This marked the beginning of modern web interactivity.
+						</p>
+						<div class="timeline-callout fact">
+							<strong>Fact:</strong> JavaScript was originally named <strong>Mocha</strong>, then renamed to <strong>LiveScript</strong>, before finally becoming <strong>JavaScript</strong>.
+						</div>
+					</div>
+				</div>
+
+				<!-- Item 2: 1996 -->
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-card">
+						<div class="timeline-header">
+							<span class="timeline-year">1996</span>
+							<span class="timeline-event">Browser Wars & Standardization</span>
+						</div>
+						<p class="timeline-description">
+							Microsoft introduced its own version of JavaScript called <strong>JScript</strong> for Internet Explorer.
+							<br /><br />
+							This led to compatibility issues between browsers during the "Browser Wars." To resolve inconsistencies, Netscape submitted JavaScript to <strong>ECMA International</strong>. This step initiated the process of formal standardization.
+						</p>
+						<div class="timeline-callout insight">
+							<strong>Insight:</strong> ECMA (European Computer Manufacturers Association) Standardization ensured that JavaScript behaved consistently across different browsers, reducing compatibility issues for developers.
+						</div>
+					</div>
+				</div>
+
+				<!-- Item 3: 1997 -->
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-card">
+						<div class="timeline-header">
+							<span class="timeline-year">1997</span>
+							<span class="timeline-event">ECMAScript 1</span>
+						</div>
+						<p class="timeline-description">
+							The first official standard was published as <strong>ECMA-262</strong>, cementing JavaScript's core behavior across conforming environments.
+						</p>
+					</div>
+				</div>
+
+				<!-- Item 4: 1999 -->
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-card">
+						<div class="timeline-header">
+							<span class="timeline-year">1999</span>
+							<span class="timeline-event">ECMAScript 3</span>
+						</div>
+						<p class="timeline-description">
+							ECMAScript 3 introduced major improvements such as <strong>regular expressions</strong> and better <strong>exception handling</strong>.
+							<br /><br />
+							These additions made JavaScript more powerful and practical for large applications. It significantly improved reliability and developer experience. For many years, ES3 remained the dominant standard.
+						</p>
+						<div class="timeline-callout did-you-know">
+							<strong>Did You Know?</strong> ECMAScript 4 was planned but later abandoned due to disagreements in the developer community.
+						</div>
+					</div>
+				</div>
+
+				<!-- Item 5: 2005 -->
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-card">
+						<div class="timeline-header">
+							<span class="timeline-year">2005</span>
+							<span class="timeline-event">The "AJAX" Renaissance</span>
+						</div>
+						<p class="timeline-description">
+							The term <strong>AJAX</strong> was popularized in 2005.
+							<br /><br />
+							It allowed web pages to fetch and update data without reloading the entire page. This innovation enabled highly dynamic applications like Gmail and Google Maps.
+						</p>
+						<div class="timeline-callout fact">
+							<strong>Fact:</strong> AJAX was one of the major reasons web applications started feeling like desktop applications.
+						</div>
+					</div>
+				</div>
+
+				<!-- Item 6: 2006 -->
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-card">
+						<div class="timeline-header">
+							<span class="timeline-year">2006</span>
+							<span class="timeline-event">jQuery Release</span>
+						</div>
+						<p class="timeline-description">
+							John Resig released the <strong>jQuery</strong> library, which greatly simplified DOM manipulation, event handling, and AJAX across inconsistent browsers.
+						</p>
+					</div>
+				</div>
+
+				<!-- Item 7: 2008 -->
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-card">
+						<div class="timeline-header">
+							<span class="timeline-year">2008</span>
+							<span class="timeline-event">Google Chrome & V8 Engine</span>
+						</div>
+						<p class="timeline-description">
+							Google launched the Chrome browser with the powerful <strong>V8 JavaScript engine</strong>.
+							<br /><br />
+							V8 used <strong>Just-In-Time (JIT)</strong> compilation to convert JavaScript directly into machine code. This greatly improved performance and execution speed.
+						</p>
+						<div class="timeline-callout insight">
+							<strong>Insight:</strong> The V8 engine later became the foundation of Node.js, enabling server-side JavaScript.
+						</div>
+					</div>
+				</div>
+
+				<!-- Item 8: 2009 -->
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-card">
+						<div class="timeline-header">
+							<span class="timeline-year">2009</span>
+							<span class="timeline-event">Node.js</span>
+						</div>
+						<p class="timeline-description">
+							Node.js was introduced by <strong>Ryan Dahl</strong> as a server-side JavaScript runtime environment.
+							<br /><br />
+							It allowed JavaScript to run outside the browser using the V8 engine.
+						</p>
+						<div class="timeline-callout did-you-know">
+							<strong>Did You Know?</strong> Node.js uses an event-driven, non-blocking I/O model, making it efficient for scalable applications.
+						</div>
+					</div>
+				</div>
+
+				<!-- Item 9: 2015 -->
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-card">
+						<div class="timeline-header">
+							<span class="timeline-year">2015</span>
+							<span class="timeline-event">ECMAScript 2015 (ES6)</span>
+						</div>
+						<p class="timeline-description">
+							ES6 introduced modern features like <strong>classes</strong>, <strong>modules</strong>, <strong>arrow functions</strong>, and <strong>promises</strong>.
+							<br /><br />
+							It significantly modernized the language.
+						</p>
+						<div class="timeline-callout fact">
+							<strong>Fact:</strong> Before 2015, JavaScript updates were infrequent and massive. The industry would wait years for a major new version (like the jump from ES3 in 1999 to ES5 in 2009). These were "blockbuster" releases—they contained a huge number of changes all at once, which made them difficult to implement for browser creators and risky for developers, as they often introduced significant compatibility challenges. After ES6, JavaScript updates are released annually instead of waiting several years between major versions.
+						</div>
+					</div>
+				</div>
+
+				<!-- Item 10: Present Day -->
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-card">
+						<div class="timeline-header">
+							<span class="timeline-year">Present Day</span>
+							<span class="timeline-event">The Universal Runtime</span>
+						</div>
+						<p class="timeline-description">
+							JavaScript is the most popular programming language globally, powering web frameworks, cloud functions, desktop apps (Electron), mobile apps, and machine learning.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+</Layout>

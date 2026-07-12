@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About ECMA TC39 | JavaScript Basics" description="Discover Technical Committee 39 (TC39), the organization behind the standardization and evolution of the JavaScript (ECMAScript) language.">
+	<main>
+		<!-- TC39 Header Section -->
+		<section class="hero">
+			<div class="container animate-fade-in" style="padding-bottom: 2rem;">
+				<div class="about-card-badge" style="margin: 0 auto 1.5rem auto; display: table;">ECMA International</div>
+				<h1>Understanding the <br /><span class="gradient-text">TC39 Committee</span></h1>
+				<p class="hero-subtitle">
+					The steering force that designs and governs the evolution of the JavaScript language.
+				</p>
+			</div>
+		</section>
+
+		<!-- Content Section -->
+		<section class="about-content container animate-fade-in" style="padding: 0 0 8rem 0;">
+			<div class="about-grid">
+				<div class="about-card definition-card">
+					<div class="about-card-badge">ECMA International</div>
+					<h3>What is TC39?</h3>
+					<p>
+						<strong>TC39 (Technical Committee 39)</strong> is the group within <strong>Ecma International</strong> responsible for maintaining and evolving the definition of the ECMAScript programming language, more commonly known as <strong>JavaScript</strong>.
+					</p>
+					
+					<h4 class="about-subheading">How TC39 Maintains JavaScript</h4>
+					<p>
+						TC39 acts as the governing body for the language, ensuring it remains a cross-platform, vendor-neutral, and stable technology. Its responsibilities include:
+					</p>
+					
+					<ul class="responsibilities-list">
+						<li>
+							<strong>Standardization:</strong>
+							The committee defines the syntax, semantics, and core libraries of the language.
+						</li>
+						<li>
+							<strong>Consensus-Based Decision Making:</strong>
+							TC39 operates by consensus, meaning decisions require broad agreement from its members—who include representatives from major browser vendors, corporations, and academics—to ensure the language evolves to meet developer needs without causing conflicts.
+						</li>
+						<li>
+							<strong>Testing and Quality:</strong>
+							They develop test suites (such as <strong>Test262</strong>) to verify that browser engines and runtimes correctly implement the standard.
+						</li>
+						<li>
+							<strong>Backwards Compatibility:</strong>
+							A primary goal of the committee is to evolve JavaScript while ensuring that existing codebases continue to function, which is why new features are heavily vetted.
+						</li>
+					</ul>
+				</div>
+
+				<div class="about-card process-card">
+					<div class="about-card-badge">The Standardisation Process</div>
+					<h3>The Five-Stage Process</h3>
+					<p>
+						To ensure language updates are reliable, TC39 uses a strict stage-based pipeline. A proposal must climb from Stage 0 to Stage 4 before it is officially released.
+					</p>
+					
+					<ul class="stages-list">
+						<li>
+							<span class="stage-num">0</span>
+							<div class="stage-info">
+								<strong>Strawperson:</strong> Initial draft of an idea or concept proposed by a TC39 member.
+							</div>
+						</li>
+						<li>
+							<span class="stage-num">1</span>
+							<div class="stage-info">
+								<strong>Proposal:</strong> Makes a case for the addition, outlining the API shape, semantics, and implementation challenges.
+							</div>
+						</li>
+						<li>
+							<span class="stage-num">2</span>
+							<div class="stage-info">
+								<strong>Draft:</strong> Precise specification language is drafted, detailing syntax and semantics.
+							</div>
+						</li>
+						<li>
+							<span class="stage-num">3</span>
+							<div class="stage-info">
+								<strong>Candidate:</strong> Crucial testing phase. The specification is complete, needing review and experimental browser implementations to proceed.
+							</div>
+						</li>
+						<li>
+							<span class="stage-num">4</span>
+							<div class="stage-info">
+								<strong>Finished:</strong> The feature has test suite coverage, multiple browser implementations, and is ready for inclusion in the annual ECMA standard release.
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

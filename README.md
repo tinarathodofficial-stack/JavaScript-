@@ -1,63 +1,53 @@
-# Astro Starter Kit: Blog
+# JavaScript Basics: History & TC39 Committee Notes
 
-```sh
-npm create astro@latest -- --template blog
-```
+A beautifully styled, high-performance Astro project dedicated to documenting the history, evolution, and governance of JavaScript (ECMAScript). 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Project Overview
 
-Features:
+This repository has been customized to focus purely on the core evolution of the language:
+1. **Interactive History Timeline** (`/`): A clean, vertical timeline charting 10 major milestones from JavaScript's creation in 1995 to its usage as a universal runtime today. Includes visual callouts (**Facts**, **Insights**, and **Did You Know?** alerts).
+2. **About TC39 Page** (`/tc39`): A dedicated subpage introducing Technical Committee 39, its responsibilities (Standardization, Consensus, Testing/Test262, Backwards Compatibility), and the **Five-Stage standardization process** of ECMA-262.
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+---
 
-## 🚀 Project Structure
+## 📂 Custom Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside this project, you'll find:
 
 ```text
 ├── public/
+│   └── favicon.png         # Document browser tab icon
 ├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+│   ├── layouts/
+│   │   └── Layout.astro    # Common page wrapper, header navigation, and footer
+│   ├── pages/
+│   │   ├── index.astro     # Main homepage route (Hero & History Timeline)
+│   │   └── tc39.astro      # Separate route for TC39 Committee notes (/tc39)
+│   └── styles/
+│       └── global.css      # Core Design System, visual tokens, and custom styling
+├── astro.config.mjs        # Astro project configuration
+├── package.json            # Scripts and NPM dependency registry
+└── tsconfig.json           # TypeScript configuration
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+##  Genie Commands
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+All commands are run from the root of the project:
 
-Any static assets, like images, can be placed in the `public/` directory.
+| Command | Action |
+| :--- | :--- |
+| `npm install` | Installs project dependencies |
+| `npm run dev` | Starts local development server at `http://localhost:4321` |
+| `npm run build` | Builds the static site production bundle to `./dist/` |
+| `npm run preview` | Previews the local build before deployment |
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 🎨 Theme & Styling
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+This project features a premium glassmorphic dark mode theme:
+*   **Colors**: Custom CSS variables for gradients, backgrounds, borders, and callouts (Amber/Orange for facts, Indigo for insights, Emerald/Green for trivia).
+*   **Fonts**: Styled using modern system sans-serif typography.
+*   **Responsiveness**: Grid-based layouts that adjust automatically for desktop, tablet, and mobile views.
